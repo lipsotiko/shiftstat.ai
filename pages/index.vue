@@ -1,6 +1,17 @@
 <script setup>
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { ref } from "vue";
+
+const email = ref("");
+const handleCreateAccount = () => {
+  navigateTo(`https://app.poneres.com/sign-up?roles=PROVIDER&email=${encodeURI(email.value)}`, {
+    external: true,
+    open: {
+      target: '_blank',
+    }
+  });
+};
 </script>
 <template>
   <div>
@@ -15,17 +26,24 @@ import { Button } from "@/components/ui/button";
       <p
         class="max-w-(--breakpoint-md) px-2 text-lg/7 font-light text-gray-500 max-sm:px-4"
       >
-        Apply in 10 minutes for online business banking that transforms how you
-        operate.
+        No recruiters. No markups. More Control.
       </p>
     </div>
     <div class="flex items-center justify-center">
       <div class="w-xl md:flex">
-        <Input id="email" type="email" placeholder="Email" class="m-1" />
-        <Button class="cursor-pointer w-full md:w-[128px] m-1"
+        <Input
+          id="email"
+          type="email"
+          placeholder="Email"
+          class="m-1"
+          v-model="email"
+        />
+        <Button
+          class="w-full md:w-[128px] m-1"
+          @click="handleCreateAccount()"
           >Create Account</Button
         >
-        <Button variant="outline" class="cursor-pointer w-full md:w-[128px] m-1"
+        <Button variant="outline" class="w-full md:w-[128px] m-1"
           >Contact Sales</Button
         >
       </div>

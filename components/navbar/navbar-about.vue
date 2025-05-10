@@ -16,7 +16,7 @@ const navigateAndCloseMenu = async () => {
 <template>
   <NavigationMenuItem>
     <NavigationMenuLink :class="navigationMenuTriggerStyle()" as-child>
-      <NuxtLink class="cursor-pointer" @click="navigateAndCloseMenu">About</NuxtLink>
+      <NuxtLink @click="navigateAndCloseMenu">About</NuxtLink>
     </NavigationMenuLink>
   </NavigationMenuItem>
 </template>

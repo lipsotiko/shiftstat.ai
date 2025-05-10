@@ -24,7 +24,7 @@ const toggleMenu = () => {
 <template>
   <div class="col-span-2 md:hidden">
     <Button
-      class="float-right cursor-pointer"
+      class="float-right"
       variant="outline"
       size="icon"
       @click="isOpen = !isOpen"
@@ -38,7 +38,7 @@ const toggleMenu = () => {
   >
     <div class="p-4 h-[68px]">
       <Button
-        class="float-right cursor-pointer"
+        class="float-right"
         variant="outline"
         size="icon"
         @click="toggleMenu"

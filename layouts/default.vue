@@ -42,6 +42,24 @@ const components: { title: string; href: string; description: string }[] = [
       "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
   },
 ];
+
+const goToLogin = () => {
+  navigateTo(`https://app.poneres.com/oauth2/authorization/okta`, {
+    external: true,
+    open: {
+      target: '_blank',
+    }
+  });
+}
+
+const handleCreateAccount = () => {
+  navigateTo('https://app.poneres.com/sign-up?roles=PROVIDER', {
+    external: true,
+    open: {
+      target: '_blank',
+    }
+  });
+};
 </script>
 
 <template>
@@ -50,8 +68,8 @@ const components: { title: string; href: string; description: string }[] = [
       <NuxtLink to="/">Poneres Connect</NuxtLink>
       <NavbarMobile>
         <div class="flex m-2">
-          <Button class="cursor-pointer flex-1 m-2">Create Account</Button>
-          <Button variant="outline" class="cursor-pointer flex-1 m-2"
+          <Button class="flex-1 m-2">Create Account</Button>
+          <Button variant="outline" class="flex-1 m-2"
             >Log in</Button
           >
         </div>
@@ -60,8 +78,8 @@ const components: { title: string; href: string; description: string }[] = [
         <NavbarDesktop />
       </div>
       <div class="justify-end hidden md:flex">
-        <Button variant="outline" class="mr-2 cursor-pointer">Log in</Button>
-        <Button class="cursor-pointer">Create Account</Button>
+        <Button variant="outline" class="mr-2" @click="goToLogin">Log in</Button>
+        <Button @click="handleCreateAccount">Create Account</Button>
       </div>
     </div>
     <div class="w-full">
