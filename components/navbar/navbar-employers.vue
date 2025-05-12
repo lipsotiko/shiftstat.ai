@@ -48,7 +48,7 @@ const components: { title: string; href: string; description: string }[] = [
 
 <template>
   <NavigationMenuItem>
-    <NavigationMenuTrigger>Pricing</NavigationMenuTrigger>
+    <NavigationMenuTrigger>Employers</NavigationMenuTrigger>
     <NavigationMenuContent>
       <ul
         class="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]"

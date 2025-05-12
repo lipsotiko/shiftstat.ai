@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { NavigationMenuList, NavigationMenuRoot } from "reka-ui";
-
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-vue-next";
 import { ref } from "vue";
@@ -49,8 +48,9 @@ const toggleMenu = () => {
     <div>
       <NavigationMenuRoot orientation="vertical">
         <NavigationMenuList>
-          <NavbarServices />
-          <NavbarPricing />
+          <NavbarHome />
+          <NavbarProviders />
+          <NavbarEmployers />
           <NavbarAbout />
         </NavigationMenuList>
       </NavigationMenuRoot>

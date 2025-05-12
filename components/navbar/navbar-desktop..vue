@@ -8,8 +8,9 @@ import {
 <template>
   <NavigationMenu>
     <NavigationMenuList>
-      <NavbarServices />
-      <NavbarPricing />
+      <NavbarHome />
+      <NavbarProviders />
+      <NavbarEmployers />
       <NavbarAbout />
     </NavigationMenuList>
   </NavigationMenu>

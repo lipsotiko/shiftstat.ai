@@ -43,9 +43,6 @@ const handleCreateAccount = () => {
           @click="handleCreateAccount()"
           >Create Account</Button
         >
-        <Button variant="outline" class="w-full md:w-[128px] m-1"
-          >Contact Sales</Button
-        >
       </div>
     </div>
   </div>
