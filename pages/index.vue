@@ -24,9 +24,9 @@ const handleCreateAccount = () => {
     </div>
     <div class="flex justify-center p-10">
       <p
-        class="max-w-(--breakpoint-md) px-2 text-lg/7 font-light text-gray-500 max-sm:px-4"
+        class="max-w-(--breakpoint-md) px-2 text-lg/7 font-light text-gray-500 max-sm:px-4 text-center"
       >
-        No recruiters. No markups. More Control.
+        AI-driven healthcare staffing platform that automates provider matching — no recruiters.
       </p>
     </div>
     <div class="flex items-center justify-center">
