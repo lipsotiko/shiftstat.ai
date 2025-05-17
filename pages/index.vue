@@ -26,7 +26,7 @@ const handleCreateAccount = () => {
       <p
         class="max-w-(--breakpoint-md) px-2 text-lg/7 font-light text-gray-500 max-sm:px-4 text-center"
       >
-        AI-driven healthcare staffing platform that automates provider matching — no recruiters.
+        Smarter staffing with AI - skip the recruiters and get matched instantly.
       </p>
     </div>
     <div class="flex items-center justify-center">
