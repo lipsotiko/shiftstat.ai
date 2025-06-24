@@ -27,7 +27,7 @@ const handleCreateAccount = () => {
 <template>
   <div class="m-4">
     <div class="grid grid-cols-3 gap-4">
-      <NuxtLink to="/">Poneres Connect</NuxtLink>
+      <NuxtLink to="/" class="font-semibold">Shift Stat AI</NuxtLink>
       <NavbarMobile>
         <div class="flex m-2">
           <Button class="flex-1 m-2">Create Account</Button>

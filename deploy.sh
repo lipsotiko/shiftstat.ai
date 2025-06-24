@@ -1,6 +1,6 @@
 npm run generate
 
-BUCKET="poneres-connect"
+BUCKET="shiftstat"
 
 aws s3 sync ./.output/public "s3://$BUCKET"  --delete
 
