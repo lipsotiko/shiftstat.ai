@@ -19,14 +19,14 @@ const handleCreateAccount = () => {
       <h1
         class="px-2 text-3xl tracking-tighter text-balance max-lg:font-medium max-sm:px-4 sm:text-4xl lg:text-5xl xl:text-6xl"
       >
-        Where Top Healthcare Professionals Find Their Next Opportunity.
+        Shift Stat: The Marketplace for Healthcare Shifts
       </h1>
     </div>
     <div class="flex justify-center p-10">
       <p
         class="max-w-(--breakpoint-md) px-2 text-lg/7 font-light text-gray-500 max-sm:px-4 text-center"
       >
-        Smarter staffing with AI - skip the recruiters and get matched instantly.
+      Like Airbnb, but for healthcare. We connect licensed providers directly to hospitals and clinics — no recruiters, no staffing agencies, no hidden markups.
       </p>
     </div>
     <div class="flex items-center justify-center">

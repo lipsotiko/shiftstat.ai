@@ -30,7 +30,7 @@ const handleCreateAccount = () => {
       <NuxtLink to="/" class="font-semibold">Shift Stat AI</NuxtLink>
       <NavbarMobile>
         <div class="flex m-2">
-          <Button class="flex-1 m-2">Create Account</Button>
+          <Button class="flex-1 m-2">Create account</Button>
           <Button variant="outline" class="flex-1 m-2" @click="goToLogin"
             >Log in</Button
           >
@@ -40,8 +40,8 @@ const handleCreateAccount = () => {
         <NavbarDesktop />
       </div>
       <div class="justify-end hidden md:flex">
-        <Button variant="outline" class="mr-2" @click="goToLogin">Log in</Button>
-        <Button @click="handleCreateAccount">Create Account</Button>
+        <Button variant="link" class="mr-2" @click="goToLogin">Log in</Button>
+        <Button @click="handleCreateAccount">Create account</Button>
       </div>
     </div>
     <div class="w-full">
