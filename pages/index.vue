@@ -3,6 +3,15 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { ref } from "vue";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select'
 
 const email = ref("");
 const handleCreateAccount = () => {
@@ -25,13 +34,34 @@ const handleCreateAccount = () => {
       </div>
       <div class="flex justify-center pb-8">
         <p class="max-w-(--breakpoint-md) px-2 text-lg/7 font-light text-gray-500 max-sm:px-4 text-center">
-          Shifting healthcare staffing through AI-powered precision.
+          Shifting healthcare through AI-powered precision.
         </p>
       </div>
       <div class="flex items-center justify-center mb-4">
-        <div class="w-xl md:flex p-4">
-          <Input id="email" type="email" placeholder="Email" class="m-1 bg-gray-50" v-model="email" />
-          <Button class="w-full md:w-[128px] m-1" @click="handleCreateAccount()">Create Account</Button>
+        <Select>
+          <SelectTrigger class="w-full md:w-[188px] bg-gray-50">
+            <SelectValue placeholder="Location" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectGroup>
+              <SelectItem value="anesthesiology">
+                Baltimore, MD
+              </SelectItem>
+              <SelectItem value="em">
+                Miami, FL
+              </SelectItem>
+              <SelectItem value="blueberry">
+                Chicago, IL
+              </SelectItem>
+            </SelectGroup>
+          </SelectContent>
+        </Select>
+        <div class="w-2xl md:flex m-1">
+          <Input id="email" type="email" placeholder="Shift description, keywords, or facility" class="m-1 bg-gray-50"
+            v-model="email" />
+          <Button class="w-full md:w-[128px] m-1" @click="() => { navigateTo('/shifts') }">
+            Search
+          </Button>
         </div>
       </div>
     </Card>
@@ -42,9 +72,9 @@ const handleCreateAccount = () => {
             Tired of Recruiters?
           </h2>
           <p class="font-light">
-            Most providers are frustrated by the lack of control and transparency in healthcare staffing. ShiftStat puts
-            the power back in your hands by establishing direct communication between providers and facilities, without
-            the layers of traditional staffing models.
+            Most providers are frustrated by the lack of control and transparency in healthcare. ShiftStat puts the
+            power back in your hands by connecting you directly with facilities—eliminating recruiters, gatekeepers, and
+            hidden fees.
           </p>
         </div>
         <div class="p-2 m-4 sm:w-[50%]">
@@ -57,8 +87,6 @@ const handleCreateAccount = () => {
           </p>
         </div>
       </section>
-
-      <!-- How it Works -->
       <Card class="m-4 bg-gray-50">
         <section class="p-4 text-center">
           <h2
@@ -101,16 +129,6 @@ const handleCreateAccount = () => {
           </Card>
         </div>
       </section>
-
-      <!-- CTA -->
-      <Card class="py-10 px-6 bg-sky-500 text-white">
-        <div class="text-center">
-          <h2 class="text-3xl mb-4">Start Searching Shifts Today</h2>
-          <p class="mb-6 text-lg">No account needed to browse. See available shifts now.</p>
-          <Button variant="secondary" class="text-sky-700 hover:bg-gray-100">
-            Browse Shifts</Button>
-        </div>
-      </Card>
       <footer class="text-center text-sm text-gray-500 py-8 border-t mt-8">
         © 2025 ShiftStat, Inc. · <a href="#" class="underline">Privacy</a>
       </footer>
