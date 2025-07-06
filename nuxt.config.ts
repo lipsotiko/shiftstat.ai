@@ -11,7 +11,22 @@ export default defineNuxtConfig({
     plugins: [
       tailwindcss(),
     ],
+    server: {
+      proxy: {
+        "/api": {
+          target: "http://localhost:8080",
+          changeOrigin: true,
+        },
+      },
+    },
   },
-
-  modules: ['nuxt-viewport']
+  modules: ['nuxt-viewport', 'dayjs-nuxt'],
+  runtimeConfig: {
+    public: {
+      apiBase:
+        process.env.NODE_ENV === "development"
+        ? "http://localhost:8080"
+        : "https://app.poneres.com",
+    },
+  },
 })
