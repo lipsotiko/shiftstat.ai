@@ -27,7 +27,12 @@ const handleCreateAccount = () => {
 <template>
   <div class="m-4">
     <div class="grid grid-cols-3 gap-4">
-      <NuxtLink to="/" class="font-semibold">ShiftStat</NuxtLink>
+      <NuxtLink to="/" class="font-semibold">
+        <div class="flex">
+          <img src="/logo.png" class="w[-36px] h-[36px]"/>
+          <p class="p-1 text-lg">ShiftStat</p>
+        </div>
+      </NuxtLink>
       <NavbarMobile>
         <div class="flex m-2">
           <Button class="flex-1 m-2">Create account</Button>
